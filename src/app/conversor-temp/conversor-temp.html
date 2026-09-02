@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-body">
+
+    <h2 class="card-title">
+      Conversor de Temperatura
+    </h2>
+
+    <div class="mb-3">
+      <label class="form-label">
+        Temperatura em Celsius (°C)
+      </label>
+
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="celsius">
+    </div>
+
+    <button
+      class="btn btn-primary"
+      (click)="converter()">
+
+      Converter
+
+    </button>
+
+    <div class="row mt-4">
+
+      <div class="col-md-6">
+        <label class="form-label">
+          Fahrenheit (°F)
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          [value]="fahrenheit | number:'1.2-2'"
+          readonly>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">
+          Kelvin (K)
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          [value]="kelvin | number:'1.2-2'"
+          readonly>
+      </div>
+
+    </div>
+
+  </div>
+</div>
